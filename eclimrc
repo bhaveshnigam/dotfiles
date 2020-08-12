@@ -1,0 +1,16 @@
+# Bind eclimd to all interfaces
+nailgun.server.host=0.0.0.0
+
+# Specifies the port that nailgun/eclimd listens on for client requests.
+nailgun.server.port=10012
+
+# Specifies the default workspace directory to use
+# See $ECLIPSE_HOME/configuration/config.ini for other OSGI properties.
+osgi.instance.area.default=@user.home/workspace
+
+# Increase the heap size.
+-Xmx256M
+
+# Increase the perm gen size.
+-XX:PermSize=64m
+-XX:MaxPermSize=128m

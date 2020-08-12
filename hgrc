@@ -1,0 +1,42 @@
+[ui]
+username = Yesudeep Mangalapilly <yesudeep@google.com>
+#ignore = /Users/yesudeep/.hgignore_global
+#logtemplate = "\033[33mchangeset:{rev}:{node|short}\033[0m\n{branches}{tags}{parents}user:{author}\ndate:{date|date}\n{files}{file_copies}description:\n{desc|strip}\n\n\n"
+#editor=emacs -nw
+
+logtemplate = "changeset:   {rev}:{node}\ntag:         {tags}\nuser:        {author}\ndate:        {date|date}\nfiles:       {files}{file_copies}\ndescription: {desc|strip}\n\n\n"
+
+[defaults]
+qnew = -Ue
+
+[extensions]
+color =
+hgext.bookmarks =
+#hggit =
+pager =
+
+[color]
+mode = auto
+
+[pager]
+pager = LESS='FSRX' less
+quiet = True
+attend = diff,status,log,qdiff,blame,annotate,pdiff,glog
+
+[diff]
+git = True
+showfunc = 1
+unified = 8
+
+[git]
+intree = true
+
+[web]
+# Linux.
+#cacerts = /etc/ssl/certs/ca-certificates.crt
+# Mac OS X.
+# From:
+# http://mercurial.selenic.com/wiki/CACertificates#Configuration_of_HTTPS_certificate_authorities
+# openssl req -new -x509 -extensions v3_ca -keyout /dev/null -out dummycert.pem -days 3650
+# sudo cp dummycert.pem /etc/hg-dummy-cert.pem
+#cacerts = /etc/hg-dummy-cert.pem

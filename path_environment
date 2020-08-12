@@ -1,0 +1,44 @@
+# Preparation for development environment.
+
+# Google Android SDK.
+# Buck requires this to be defined and exported to avoid hardcoding in repo.
+export ANDROID_SDK=$HOME/Library/Android/sdk
+
+# Gradle requires this.
+export ANDROID_HOME=$ANDROID_SDK
+
+# Google Cloud SDK.
+export GOOGLE_CLOUD_SDK=$HOME/google-cloud-sdk
+
+
+# Google Go App Engine SDK
+export GOOGLE_GO_APP_ENGINE_SDK=$HOME/go_appengine
+
+# Google Go language SDK.
+# Somehow the stupid system overrides these. Keep them here for our
+# installation to work.
+# export GOROOT=/usr/local/go
+# export GOPATH=/usr/local/golib
+
+export BURROW=$HOME/burrow
+
+# Set the path environment now.
+# WARNING: Please note that the whitespace at the beginning and ends of each of
+# the following lines matters. Edit carefully.
+export PATH=\
+$HOME/bin:\
+$HOME/var/bin:\
+$ANDROID_SDK/platform-tools:\
+$ANDROID_SDK/tools:\
+$GOOGLE_GO_APP_ENGINE_SDK:\
+$GOOGLE_CLOUD_SDK/bin:\
+/usr/local/go:\
+$HOME/go/bin:\
+/usr/local/mysql/bin:\
+/usr/local/bin:\
+/usr/bin:\
+/bin:\
+/usr/local/sbin:\
+/usr/sbin:\
+/sbin:\
+$PATH

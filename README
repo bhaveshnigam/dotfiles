@@ -1,0 +1,14 @@
+Here lie dotfiles that I regularly edit/change.
+
+Clone this repository to ~/.dotfiles::
+
+    git clone git://github.com/bhaveshnigam/dotfiles.git ~/.dotfiles
+
+Put this into your ~/.bashrc or ~/.profile
+
+    # Customizations.
+    if [ -f ~/.dotfiles/bashrc ]; then
+        . ~/.dotfiles/bashrc
+    fi
+
+Enjoy!

@@ -1,0 +1,46 @@
+# Please upgrade to at least git version 1.8.0+
+[user]
+    email = yesudeep@google.com
+    name = Yesudeep Mangalapilly
+
+[color]
+    branch = auto
+    diff = auto
+    grep = auto
+    interactive = auto
+    status = auto
+
+[alias]
+    authors = log --all --format='%aN <%aE>'
+    b = branch
+    ba = branch -a
+    cs = commit -s
+    c = commit -s -m
+    changelog = log --pretty='format:* %s'
+    co = checkout
+    conflicts = !git ls-files -u | cut -f 2 | sort -u
+    get-tree = merge --squash -s subtree --no-commit
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    s = status -s
+    unstage = reset HEAD
+
+[diff]
+    guitool = meld
+
+[merge]
+    tool = mymeld
+    conflictstyle = diff3
+
+[mergetool "mymeld"]
+    cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --diff $LOCAL $BASE $REMOTE $MERGED
+
+[tig]
+#   show-date = relative
+#   author-width = 8
+    show-rev-graph = yes
+[push]
+#    default = matching
+[core]
+	editor = /usr/bin/vim
+[push]
+	default = simple
